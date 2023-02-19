@@ -1,0 +1,38 @@
+name: TofuDailyTask
+version: '${project.version}'
+main: com.mcstaralliance.starkill.StarKill
+description: a simple plugin
+website: www.ricetofu.cn
+api-version: "1.19"
+commands:
+  setBornPoint:
+    usage: /setBornPoint
+    description: set a born point
+  listBornPoint:
+    usage: /listBornPoint
+    description: list all the born point
+  toBornPoint:
+    usage: /toBornPoint <index>
+    description: to a born point
+  removeBornPoint:
+    usage: /removeBornPoint <index>
+    description: remove a born point
+
+
+  createRoom:
+    usage: /creatRoom <maxPlayer>
+    description: creat a room
+  deleteRoom:
+    usage: /deleteRoom
+    description: delete the room
+
+  join:
+    usage: /join
+    description: join a room if it exist
+  quit:
+    usage: /quit
+    description: quit a room if you are in.
+
+  startGame:
+    usage: /startGame
+    description: start a game
