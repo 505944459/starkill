@@ -1,4 +1,4 @@
-name: TofuDailyTask
+name: StarKill
 version: '${project.version}'
 main: com.mcstaralliance.starkill.StarKill
 description: a simple plugin

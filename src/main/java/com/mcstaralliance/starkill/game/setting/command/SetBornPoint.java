@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * @Author: RiceTofu123
  * @Date: 2023-02-15
- * @Discription: the command for op to set the game's born points
+ * @Description: the command for op to set the game's born points
  * */
 public class SetBornPoint implements CommandExecutor {
 

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mcstaralliance.starkill</groupId>
-    <artifactId>starkill</artifactId>
+    <artifactId>Starkill</artifactId>
     <version>1.0(Dev)</version>
 
     <repositories>

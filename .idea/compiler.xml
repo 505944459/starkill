@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="starkill" />
+        <module name="Starkill" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="starkill" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

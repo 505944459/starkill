@@ -9,7 +9,7 @@ import org.bukkit.command.ConsoleCommandSender;
 /**
  * @Author: RiceTofu123
  * @Date: 2023-02-15
- * @Discription: the command for op to creat a room,after use this,game into the ready state(can't use setting commands now)
+ * @Description: the command for op to creat a room,after use this,game into the ready state(can't use setting commands now)
  * */
 public class CreatRoom implements CommandExecutor {
     @Override

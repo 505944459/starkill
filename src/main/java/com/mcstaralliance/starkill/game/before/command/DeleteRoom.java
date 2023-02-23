@@ -9,7 +9,7 @@ import org.bukkit.command.ConsoleCommandSender;
 /**
  * @Author: RiceTofu123
  * @Date: 2023-02-15
- * @Discription: the command for op to delete a room,after use this,game into the setting state
+ * @Description: the command for op to delete a room,after use this,game into the setting state
  * */
 public class DeleteRoom implements CommandExecutor {
     @Override

@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 /**
  * @Author: RiceTofu
  * @Date: 2023-02-16
- * @Discription: Represent the characters in the game
+ * @Description: Represent the characters in the game
  * */
 public interface Role {
 
