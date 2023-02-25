@@ -1,1 +1,14 @@
-born-points:
+spawn-world: world
+
+rooms:
+  1:
+    name: '星域杀房间NO.1'
+    lore:
+      - '点击即可加入房间'
+    max-player: 16
+    wait-world: 'world'
+    wait-location: 0 150 0
+    game-world: 'world'
+    born-locations:
+      - 100 150 100
+      - 100 150 150

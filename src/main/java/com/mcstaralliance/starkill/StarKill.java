@@ -1,16 +1,15 @@
 package com.mcstaralliance.starkill;
 
-import com.mcstaralliance.starkill.game.before.command.*;
-import com.mcstaralliance.starkill.game.setting.command.ListBornPoint;
-import com.mcstaralliance.starkill.game.setting.command.SetBornPoint;
-import com.mcstaralliance.starkill.game.setting.command.ToBornPoint;
+import com.mcstaralliance.starkill.core.listener.*;
 import com.mcstaralliance.starkill.utils.Log;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
- * main class
+ * 作者: 米豆腐
+ * 日期: 2023-02-26
+ * 描述: 插件的主类，插件加载的入口
  * */
 public class StarKill extends JavaPlugin {
 
@@ -18,23 +17,18 @@ public class StarKill extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Log.info("StarKill is loading……");
-        saveDefaultConfig();
-        config = getConfig();
+        long start = System.currentTimeMillis();//用于插件启动耗时统计
+        Log.info("插件正在启动中……");
 
-        // Registration command
-        Bukkit.getPluginCommand("setBornPoint").setExecutor(new SetBornPoint());
-        Bukkit.getPluginCommand("listBornPoint").setExecutor(new ListBornPoint());
-        Bukkit.getPluginCommand("toBornPoint").setExecutor(new ToBornPoint());
+        // 默认的监听器注册
+        Bukkit.getPluginManager().registerEvents(new PlayerInventory(),this);//放置背包点击
+        Bukkit.getPluginManager().registerEvents(new PlayerJoin(),this);//玩家加入
+        Bukkit.getPluginManager().registerEvents(new PlayerThrow(),this);//玩家扔物品
+        Bukkit.getPluginManager().registerEvents(new PlayerItemPick(),this);//玩家拾取物品
+        Bukkit.getPluginManager().registerEvents(new PlayerItemClick(),this);//玩家打开菜单
 
-        Bukkit.getPluginCommand("createRoom").setExecutor(new CreatRoom());
-        Bukkit.getPluginCommand("deleteRoom").setExecutor(new DeleteRoom());
 
-        Bukkit.getPluginCommand("join").setExecutor(new Join());
-        Bukkit.getPluginCommand("quit").setExecutor(new Quit());
-        Bukkit.getPluginCommand("startGame").setExecutor(new StartGame());
-
-        Log.info("StarKill is enabled.");
+        Log.info("插件启动成功！耗时："+(System.currentTimeMillis()-start)+"毫秒！");
     }
 
     @Override
